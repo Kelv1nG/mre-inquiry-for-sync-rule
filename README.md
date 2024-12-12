@@ -3,8 +3,10 @@ after docker compose build / up
 *pg admin hosted at port :5050
 
 couple of changes ive made compared to the demo
+```shell
 a) change lists.id and todos.id to autoincrementing pk
 b) change todos.list_id as a foreign key to lists
+```
 
 
 -- Insert sample data into the 'lists' table
