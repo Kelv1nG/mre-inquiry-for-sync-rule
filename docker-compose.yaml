@@ -2,16 +2,17 @@
 # https://docs.docker.com/compose/release-notes/#2203
 include:
   # Creates a standard Postgres instance
-  - path: ../../services/postgres.yaml
+  - path: services/postgres.yaml
   # Creates the internal MongoDB replica set
-  - path: ../../services/mongo.yaml
+  - path: services/mongo.yaml
   # Demo Django backend server and front-end web client
-  - path: ./ps-django-backend.yaml
+  - path: ps-django-backend.yaml
+  #- path: ps-nodejs-demo.yaml
 services:
   # Extend PowerSync with Mongo and Postgres healthchecks
   powersync:
     extends:
-      file: ../../services/powersync.yaml
+      file: services/powersync.yaml
       service: powersync
     depends_on:
       mongo-rs-init:

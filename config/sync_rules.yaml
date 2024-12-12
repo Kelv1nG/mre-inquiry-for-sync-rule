@@ -6,4 +6,11 @@ bucket_definitions:
   global:
     data:
       - SELECT * FROM lists
-      - SELECT * FROM todos
+
+  todos:
+    parameters:
+      - SELECT id AS todo_id
+        FROM todos
+        WHERE list_id IN request.jwt() ->> 'list_id'
+    data:
+      - SELECT * FROM todos WHERE id = bucket.todo_id

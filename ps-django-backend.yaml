@@ -1,11 +1,11 @@
 services:
   # A backend which provides basic authentication and CRUD access to the Postgres DB from the client
-  demo-backend:
+  school-erp:
     depends_on:
       pg-db:
         condition: service_healthy
     build:
-      context: https://github.com/powersync-ja/powersync-django-backend-todolist-demo.git
+      context: powersync-django-backend-todolist-demo/
     environment:
       # From the Postgres service name in linked Docker Compose file
       DATABASE_HOST: pg-db
