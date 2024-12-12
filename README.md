@@ -24,9 +24,20 @@ VALUES
     (6, 'item_2_list_3', true, 3);
 ```
 
+
+initially for items for list_id=[1,2] are included
+
+![image](https://github.com/user-attachments/assets/048724eb-6908-4916-8118-65e865978704)
+
+
+after updating
+
 -- Update the 'list_id' for a todo item
 ```shell
 UPDATE todos
 SET list_id = 2
 WHERE id = 1;
 ```
+item gets removed
+![image](https://github.com/user-attachments/assets/e79e0678-1499-46b5-8cb5-de774ccd82f2)
+
