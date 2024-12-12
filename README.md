@@ -38,6 +38,6 @@ UPDATE todos
 SET list_id = 2
 WHERE id = 1;
 ```
-item gets removed
+todo id = 1 gets removed
 ![image](https://github.com/user-attachments/assets/e79e0678-1499-46b5-8cb5-de774ccd82f2)
 
