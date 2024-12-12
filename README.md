@@ -1,6 +1,8 @@
 after docker compose build / up
 
 *pg admin hosted at port :5050
+
+
 -- Insert sample data into the 'lists' table
 ```shell
 INSERT INTO lists (
